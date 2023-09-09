@@ -10,7 +10,7 @@ on:
 
 name: Process Deployment (sfdx-hardis)
 jobs:
-  check_deployment:
+  process_deployment:
     runs-on: ubuntu-latest
     steps:
     # Checkout repo
