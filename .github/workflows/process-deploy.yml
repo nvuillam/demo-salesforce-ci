@@ -52,4 +52,4 @@ jobs:
       run: |
         echo "Perform SFDX deployment using Hardis against $CONFIG_BRANCH"
         sfdx hardis:auth:login
-        sfdx hardis:project:deploy:sources:dx --check
+        sfdx hardis:project:deploy:sources:dx
