@@ -19,6 +19,10 @@ jobs:
   build:
     name: Mega-Linter
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
       # Git Checkout
       - name: Checkout Code
