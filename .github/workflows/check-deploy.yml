@@ -1,5 +1,11 @@
+# Add your major branches names here
 on:
   pull_request:
+    branches:
+      - main
+      - preprod
+      - uat
+      - integration
 
 name: Simulate Deployment (sfdx-hardis)
 jobs:
