@@ -13,6 +13,7 @@ name: Simulate Deployment (sfdx-hardis)
 jobs:
   check_deployment:
     runs-on: ubuntu-latest
+    name: Simulate Deployment to Major Org
     steps:
     # Checkout repo
     - name: Checkout code

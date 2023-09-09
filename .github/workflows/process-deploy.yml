@@ -11,6 +11,7 @@ on:
 name: Process Deployment (sfdx-hardis)
 jobs:
   process_deployment:
+    name: Process Deployment to Major Org
     runs-on: ubuntu-latest
     steps:
     # Checkout repo
