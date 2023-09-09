@@ -1,0 +1,5 @@
+developmentBranch: integration
+autoCleanTypes:
+  - destructivechanges
+deploymentPlan:
+  packages: []
