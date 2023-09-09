@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <version>58.0</version> <!-- use current latest Salesforce api version -->
+    <version>58.0</version>
+    <types>
+        <members>AP01_CloneOppWithRelatedLists_TEST</members>
+        <members>AP01_CloneOpportunityWithRelatedLists</members>
+        <members>AnyEventCalCtrl</members>
+        <members>AnyEventCalCtrlTest</members>
+        <members>BusinessAnalyticsManager</members>
+        <members>BusinessAnalyticsManagerTest</members>
+        <members>BusinessAnalyticsQueue</members>
+        <members>CloneComponentOpportunityController</members>
+        <members>DAL</members>
+        <members>FactureForfait</members>
+        <members>FactureForfait_Test</members>
+        <members>GestionNewMonthBatch</members>
+        <members>GestionNewMonthBatch_Test</members>
+        <members>ITrigger</members>
+        <members>LTNG01_TimeSheetQuickCreate</members>
+        <members>LTNG01_TimeSheetQuickCreate_Test</members>
+        <members>LTNG02_ProjectSetup</members>
+        <members>LTNG02_ProjectSetup_Test</members>
+        <members>LTNG_Picklist</members>
+        <members>LTNG_Picklist_TEST</members>
+        <members>LigneFactureHandler</members>
+        <members>MyCalendarButtonsPicklist</members>
+        <members>PAD</members>
+        <members>PreFactureHandler</members>
+        <members>ProjectLineHandler</members>
+        <members>ProjectLineHandlerTest</members>
+        <members>ProjectRegieManagerCtrl</members>
+        <members>ProjectRegieManagerCtrlTest</members>
+        <members>TEST_CloneComponentOpportunityController</members>
+        <members>TestDataFactory</members>
+        <members>TimeSheetHandler</members>
+        <members>TimeSheetManager</members>
+        <members>TimeSheetQueue</members>
+        <members>TimeSheetQuickCreateCtrl</members>
+        <members>TimeSheetQuickCreateCtrl_Test</members>
+        <members>TimeSheetReminder</members>
+        <members>TimeSheetReminder_Test</members>
+        <members>TriggerException</members>
+        <members>TriggerFactory</members>
+        <members>strike_lookupController</members>
+        <members>strike_responseData</members>
+        <members>strike_tst_lookupController</members>
+        <members>strike_utilities</members>
+        <name>ApexClass</name>
+    </types>
 </Package>
