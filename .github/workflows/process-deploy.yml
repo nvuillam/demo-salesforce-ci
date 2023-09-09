@@ -56,5 +56,5 @@ jobs:
       run: |
         echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
         printenv
-        sfdx hardis:auth:login --debug --dev-debug || true
+        sfdx hardis:auth:login
         sfdx hardis:project:deploy:sources:dx
