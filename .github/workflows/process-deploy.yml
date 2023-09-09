@@ -52,6 +52,8 @@ jobs:
         CONFIG_BRANCH: ${{ env.GITHUB_REF_NAME }} # Defines the target branch of the PR
       run: |
         printenv
+        echo "\"$GITHUB_REF_NAME\""
+        echo "${{ env.GITHUB_REF_NAME }}"
         echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
         sfdx hardis:auth:login
         sfdx hardis:project:deploy:sources:dx
