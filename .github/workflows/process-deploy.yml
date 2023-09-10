@@ -29,7 +29,7 @@ jobs:
       run: |
         npm install @salesforce/cli --global
         sf plugins install @salesforce/plugin-packaging
-        echo 'y' | sfdx plugins:install sfdx-hardis
+        echo 'y' | sfdx plugins:install sfdx-hardis@alpha
         echo 'y' | sfdx plugins:install sfdx-essentials
         echo 'y' | sfdx plugins:install sfdmu
         echo 'y' | sfdx plugins:install sfdx-git-delta
