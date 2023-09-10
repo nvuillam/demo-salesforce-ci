@@ -56,5 +56,7 @@ jobs:
       run: |
         echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
         printenv
+        echo "$SFDX_CLIENT_ID_INTEGRATION"
+        echo "$SFDX_CLIENT_KEY_INTEGRATION"
         sfdx hardis:auth:login
         sfdx hardis:project:deploy:sources:dx
