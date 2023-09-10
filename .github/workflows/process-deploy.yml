@@ -9,6 +9,11 @@ on:
       - integration
 
 name: Process Deployment (sfdx-hardis)
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   process_deployment:
     name: Process Deployment to Major Org
@@ -31,6 +36,7 @@ jobs:
         sf plugins install @salesforce/plugin-packaging
         echo 'y' | sfdx plugins:install sfdx-hardis
         echo 'y' | sfdx plugins:install sfdx-essentials
+        # echo 'y' | sfdx plugins:install sfdmu # Disabled while it does not play well with @salesforce/cli
         echo 'y' | sfdx plugins:install sfdx-git-delta
         sf version --verbose --json
     # Set env branch variable (github.ref_name seems to not work)
@@ -52,6 +58,7 @@ jobs:
         CI_COMMIT_REF_NAME: ${{ env.BRANCH }} # Defines the target branch of the PR
         ORG_ALIAS: ${{ env.BRANCH }} # Defines the target branch of the PR
         CONFIG_BRANCH: ${{ env.BRANCH }} # Defines the target branch of the PR
+        FORCE_COLOR: "1"
       run: |
         echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
         sfdx hardis:auth:login
