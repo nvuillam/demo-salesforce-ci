@@ -58,5 +58,6 @@ jobs:
         printenv
         echo "$SFDX_CLIENT_ID_INTEGRATION"
         echo "$SFDX_CLIENT_KEY_INTEGRATION"
-        sfdx hardis:auth:login
+        sfdx hardis:auth:login --dev-debug
+        echo "Deploy !"
         sfdx hardis:project:deploy:sources:dx
