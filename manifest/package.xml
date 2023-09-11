@@ -47,8 +47,4 @@
         <members>strike_utilities</members>
         <name>ApexClass</name>
     </types>
-    <types>
-        <members>SomeFlexipageName</members>
-        <name>Flexipage</name>
-    </types>
 </Package>
