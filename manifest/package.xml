@@ -47,4 +47,8 @@
         <members>strike_utilities</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>Account.OhYeah__c</members>
+        <name>CustomField</name>
+    </types>
 </Package>
