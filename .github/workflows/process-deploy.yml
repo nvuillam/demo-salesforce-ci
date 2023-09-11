@@ -34,7 +34,7 @@ jobs:
       run: |
         npm install @salesforce/cli --global
         sf plugins install @salesforce/plugin-packaging
-        echo 'y' | sfdx plugins:install sfdx-hardis
+        echo 'y' | sfdx plugins:install sfdx-hardis@alpha
         echo 'y' | sfdx plugins:install sfdx-essentials
         # echo 'y' | sfdx plugins:install sfdmu # Disabled while it does not play well with @salesforce/cli
         echo 'y' | sfdx plugins:install sfdx-git-delta
@@ -58,6 +58,7 @@ jobs:
         CI_COMMIT_REF_NAME: ${{ env.BRANCH }} # Defines the target branch of the PR
         ORG_ALIAS: ${{ env.BRANCH }} # Defines the target branch of the PR
         CONFIG_BRANCH: ${{ env.BRANCH }} # Defines the target branch of the PR
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         FORCE_COLOR: "1"
       run: |
         echo "Process SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
