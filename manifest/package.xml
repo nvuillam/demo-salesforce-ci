@@ -48,7 +48,12 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Account.DreamforceField__c</members>
         <members>Account.OhYeah__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>Account-Client Layout</members>
+        <name>Layout</name>
     </types>
 </Package>
