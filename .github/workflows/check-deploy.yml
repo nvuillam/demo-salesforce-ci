@@ -1,7 +1,11 @@
-# Add your major branches names here
-# If you do, also add SFDX_CLIENT_ID / KEY variables in job step "Login & Simulate Deployment" below
+# Manual updates in in job step "Login & Process Deployment" below:
+# - variables for additional branches: add SFDX_CLIENT_ID / KEY variables
+# - To use slack notifications, you can also define SLACK_TOKEN and SLACK_CHANNEL_ID
+#   - For branch scoped messages, add SLACK_CHANNEL_ID_ + branch name (ex: SLACK_CHANNEL_ID_INTEGRATION, SLACK_CHANNEL_ID_UAT)
+
 on:
   pull_request:
+    # Add your major branches names here
     branches:
       - main
       - preprod
@@ -36,7 +40,7 @@ jobs:
       run: |
         npm install --no-cache @salesforce/cli --global
         sf plugins install @salesforce/plugin-packaging
-        echo 'y' | sfdx plugins:install sfdx-hardis
+        echo 'y' | sfdx plugins:install sfdx-hardis@alpha
         echo 'y' | sfdx plugins:install sfdx-essentials
         echo 'y' | sfdx plugins:install sfdx-git-delta
         sf version --verbose --json
@@ -57,6 +61,9 @@ jobs:
         ORG_ALIAS: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
         CONFIG_BRANCH: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        SLACK_CHANNEL_ID_INTEGRATION: ${{ secrets.SLACK_CHANNEL_ID_INTEGRATION }}
         FORCE_COLOR: "1"
       run: |
         echo "Simulate SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
