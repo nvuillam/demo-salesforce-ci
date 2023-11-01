@@ -48,12 +48,24 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Account.Bordeaux__c</members>
+        <members>Account.Boulogne__c</members>
         <members>Account.DreamforceField__c</members>
+        <members>Account.Forme_juridique__c</members>
+        <members>Account.LaDefense__c</members>
+        <members>Account.NewField__c</members>
         <members>Account.OhYeah__c</members>
+        <members>Account.QuickDeployField__c</members>
+        <members>Account.VernonField__c</members>
+        <members>Opportunity.DeltaDeploymentField__c</members>
         <name>CustomField</name>
     </types>
     <types>
         <members>Account-Client Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>AdminSFDelivery</members>
+        <name>PermissionSet</name>
     </types>
 </Package>
