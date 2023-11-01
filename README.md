@@ -8,4 +8,4 @@ To implement is on your project, just follow the guide by clicking on the logo b
 
 Dreamforce demo :)
 
-Delta demo :)
+Delta demo :) :)
