@@ -29,7 +29,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        fetch-depth: 1 # Faster code checkout fetching only latest commit
+        persist-credentials: true
+        fetch-depth: 0 # Fetch all branches
     # Setup node
     - name: Setup Node
       uses: actions/setup-node@v3
