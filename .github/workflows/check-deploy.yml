@@ -69,5 +69,6 @@ jobs:
         FORCE_COLOR: "1"
       run: |
         echo "Simulate SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
+        git fetch --all
         sfdx hardis:auth:login
         sfdx hardis:project:deploy:sources:dx --check
