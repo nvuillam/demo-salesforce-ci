@@ -29,7 +29,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0 # Faster code checkout fetching only latest commit
+        persist-credentials: true
+        fetch-depth: 0 # Fetch all branches
     # Setup node
     - name: Setup Node
       uses: actions/setup-node@v3
@@ -57,6 +58,7 @@ jobs:
         SFDX_CLIENT_KEY_MAIN: ${{ secrets.SFDX_CLIENT_KEY_MAIN}}
         SFDX_DEPLOY_WAIT_MINUTES: 120 # Override if necessary
         SFDX_TEST_WAIT_MINUTES: 120 # Override if necessary
+        USE_DELTA_DEPLOYMENT: true
         CI_COMMIT_REF_NAME: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
         ORG_ALIAS: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
         CONFIG_BRANCH: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
@@ -67,5 +69,6 @@ jobs:
         FORCE_COLOR: "1"
       run: |
         echo "Simulate SFDX deployment using Hardis against \"$CONFIG_BRANCH\""
+        git fetch --all
         sfdx hardis:auth:login
         sfdx hardis:project:deploy:sources:dx --check

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forme_juridique__c</fullName>
+    <description>Provient de l&apos;org SF de CARRENET</description>
+    <externalId>false</externalId>
+    <label>Forme_juridique</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>association</fullName>
+                <default>false</default>
+                <label>Association</label>
+            </value>
+            <value>
+                <fullName>parapublic</fullName>
+                <default>false</default>
+                <label>Parapublic</label>
+            </value>
+            <value>
+                <fullName>public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+            <value>
+                <fullName>societe</fullName>
+                <default>false</default>
+                <label>Société</label>
+            </value>
+            <value>
+                <fullName>autres</fullName>
+                <default>false</default>
+                <label>[...] Autres</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
