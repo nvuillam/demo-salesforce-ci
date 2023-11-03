@@ -5,7 +5,7 @@
         <editable>false</editable>
         <field>Project__c.CoutMoyenJour__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions><!-- wesh -->
     <fieldPermissions>
         <editable>false</editable>
         <field>Project__c.CoutsProjetes__c</field>
