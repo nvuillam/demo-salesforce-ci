@@ -3,6 +3,7 @@ public with sharing class GestionNewMonthBatch_Test {
 
 	@IsTest
 	private static void testExecute(){
+		// Youpi !
 		Date startOfMonth = Date.today().toStartOfMonth();
 
 		Test.startTest();
