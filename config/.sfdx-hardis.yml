@@ -1,0 +1,6 @@
+developmentBranch: integration
+autoCleanTypes:
+  - destructivechanges
+deploymentPlan:
+  packages: []
+useDeltaDeployment: true
