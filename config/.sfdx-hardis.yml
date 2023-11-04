@@ -3,3 +3,4 @@ autoCleanTypes:
   - destructivechanges
 deploymentPlan:
   packages: []
+useDeltaDeployment: true
