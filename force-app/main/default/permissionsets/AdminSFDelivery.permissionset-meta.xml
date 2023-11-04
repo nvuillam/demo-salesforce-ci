@@ -4,7 +4,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Project__c.CoutMoyenJour__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions><!-- wesh -->
     <fieldPermissions>
         <editable>false</editable>
